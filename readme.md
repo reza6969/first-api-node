@@ -61,3 +61,64 @@ On Mac:
 On Windows:
 
     set vidly_jwtPrivateKey=yourSecureKey
+
+npm i -g serve
+serve -s build
+npm run build
+heroku -v
+heroku login
+export HTTP_PROXY=http://proxy.server.com:1234
+redirect into frist-api-node heroku create
+redirect into frist-api-node git push heroku master
+redirect into frist-api-node heroku logs
+redirect into frist-api-node heroku config:set vidly_db=mongodb+srv://infooffice1399:<password>@cluster0.ahwsb21.mongodb.net/test
+heroku  open
+
+http://localhost:3000/movies
+https://vidly.com/auth/callback
+https://vidly.com/auth/movies
+8fd6da67-1407-4ffe-8d72-60afb8df8a40
+
+Use the following code to set up your app for local development.
+
+heroku config:add \ HEROKU_OAUTH_ID=8fd6da67-1407-4ffe-8d72-60afb8df8a40 \ HEROKU_OAUTH_SECRET=8809ef89-cacd-4a6a-b41e-1916fbbe003d
+
+Heroku, which is an amazing cloud service
+need to install Heroku CLI 
+once you install Heroku CLI and open up the terminal run
+### `heroku -v `
+
+you need to login
+### `heroku login`
+on Mac we use export, on windows we set HTTP_PROXY and 
+### `export HTTP_PROXY=http://proxy.server.com:1234`
+### `set HTTP_PROXY=http://proxy.server.com:1234`
+MongoDB in the Cloud
+you have set up a Heroku account, now you need to setup an mLap account 
+
+Deploying to Heroku
+first-api-node
+### `heroku create vidly-api-01`
+### `heroku create`
+### `git push heroku master`
+### `heroku open`
+
+viewing Logs
+### `heroku logs`
+
+Connecting with MongoDB Driver
+1. Select your driver and version
+
+2. Install your driver
+### `npm install mongodb@3.6`
+3. Add your connection string into your application code
+mongodb+srv://<username>:<password>@cluster0.ahwsb21.mongodb.net/?retryWrites=true&w=majority
+
+we want to store this as an environment variable on Heroku
+### `heroku config:set vidly_db=mongodb+srv://<username>:<password>@cluster0.ahwsb21.mongodb.net/?retryWrites=true&w=majority`
+### `git add .`
+### `git commit -m "write message"`
+### `git push heroku master`
+### `heroku create --buildpack https://github.com/mars/create-react-app-buildpack.git`
+### `git push heroku master`
+### `heroku open`
